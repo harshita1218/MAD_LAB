@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.layoutdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LayoutDemo">
+
+        <!-- Main Activity -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LinearLayout Activity -->
+        <activity android:name=".LinearLayoutActivity" />
+
+        <!-- RelativeLayout Activity -->
+        <activity android:name=".RelativeLayoutActivity" />
+
+        <!-- ConstraintLayout Activity -->
+        <activity android:name=".ConstraintLayoutActivity" />
+
+        <!-- FrameLayout Activity -->
+        <activity android:name=".FrameLayoutActivity" />
+
+        <!-- TableLayout Activity -->
+        <activity android:name=".TableLayoutActivity" />
+
+    </application>
+
+</manifest>
