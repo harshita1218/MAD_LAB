@@ -1,0 +1,124 @@
+activity_main.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Rounded Button -->
+    <Button
+        android:id="@+id/roundedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rounded Button"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white" />
+
+    <!-- Outlined Button -->
+    <Button
+        android:id="@+id/outlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outlined Button"
+        android:background="@drawable/outlined_button"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginTop="16dp" />
+
+    <!-- Shadow Button -->
+    <Button
+        android:id="@+id/shadowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shadow Button"
+        android:background="@drawable/shadow_button"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+drawable/round_button.xml
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/holo_blue_dark" />
+    <corners android:radius="16dp" />
+</shape>
+
+
+drawable/outlined_button.xml
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="2dp" android:color="@android:color/holo_blue_dark" />
+    <corners android:radius="8dp" />
+</shape>
+
+drawable/shadow_button.xml
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:right="4dp" android:bottom="4dp">
+        <shape>
+            <solid android:color="#80000000" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@android:color/holo_orange_dark" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</layer-list>
+
+
+mainactivity.java
+
+package com.example.buttonshowcase;
+
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button roundedButton = findViewById(R.id.roundedButton);
+        Button outlinedButton = findViewById(R.id.outlinedButton);
+        Button shadowButton = findViewById(R.id.shadowButton);
+
+        roundedButton.setOnClickListener(v -> 
+            Toast.makeText(MainActivity.this, "Rounded Button Clicked", Toast.LENGTH_SHORT).show()
+        );
+
+        outlinedButton.setOnClickListener(v -> 
+            Toast.makeText(MainActivity.this, "Outlined Button Clicked", Toast.LENGTH_SHORT).show()
+        );
+
+        shadowButton.setOnClickListener(v -> 
+            Toast.makeText(MainActivity.this, "Shadow Button Clicked", Toast.LENGTH_SHORT).show()
+        );
+    }
+}
+
