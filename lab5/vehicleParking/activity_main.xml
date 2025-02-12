@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Spinner for selecting vehicle type -->
+    <Spinner
+        android:id="@+id/spinner_vehicle_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Text Field for Vehicle Number -->
+    <EditText
+        android:id="@+id/et_vehicle_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_vehicle_type"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Vehicle Number"
+        android:inputType="text" />
+
+    <!-- Text Field for RC Number -->
+    <EditText
+        android:id="@+id/et_rc_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_vehicle_number"
+        android:layout_marginTop="20dp"
+        android:hint="Enter RC Number"
+        android:inputType="text" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_rc_number"
+        android:layout_marginTop="30dp"
+        android:text="Submit" />
+</RelativeLayout>
