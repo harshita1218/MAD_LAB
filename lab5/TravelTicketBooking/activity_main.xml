@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Spinner for Source -->
+    <Spinner
+        android:id="@+id/spinner_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Spinner for Destination -->
+    <Spinner
+        android:id="@+id/spinner_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_source"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Date Picker for Selecting Travel Date -->
+    <EditText
+        android:id="@+id/et_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_destination"
+        android:layout_marginTop="20dp"
+        android:hint="Select Travel Date"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"/>
+
+    <!-- Toggle Button for One-way or Round-trip -->
+    <ToggleButton
+        android:id="@+id/toggle_trip_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_date_picker"
+        android:layout_marginTop="20dp"
+        android:textOn="Round Trip"
+        android:textOff="One Way"
+        android:text="One Way"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toggle_trip_type"
+        android:layout_marginTop="30dp"
+        android:text="Submit"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_submit"
+        android:layout_marginTop="10dp"
+        android:text="Reset"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
