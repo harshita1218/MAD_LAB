@@ -1,0 +1,84 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ID, Name, Class -->
+        <EditText android:id="@+id/edtStudentID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student ID"/>
+        <EditText android:id="@+id/edtStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Name"/>
+        <EditText android:id="@+id/edtStudentClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Class"/>
+
+        <!-- Gender (Radio Buttons) -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender:" />
+        <RadioGroup android:id="@+id/radioGroupGender"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/radioMale"
+                android:text="Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton android:id="@+id/radioFemale" android:text="Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton android:id="@+id/radioOther" android:text="Other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <!-- Hobbies (CheckBoxes) -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobbies:" />
+        <CheckBox android:id="@+id/checkReading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reading"/>
+        <CheckBox android:id="@+id/checkMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music"/>
+        <CheckBox android:id="@+id/checkSports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sports"/>
+
+        <!-- Section (Spinner) -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Section:" />
+        <Spinner android:id="@+id/spinnerSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Buttons -->
+        <Button android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"/>
+        <Button android:id="@+id/btnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View"/>
+
+        <!-- ListView -->
+        <ListView android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
