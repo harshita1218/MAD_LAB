@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/view_grid"
+        android:title="View Grid" />
+    <item android:id="@+id/view_list"
+        android:title="View List" />
+    <item android:id="@+id/search_book"
+        android:title="Search Book" />
+    <item android:id="@+id/sort_books"
+        android:title="Sort Books" />
+</menu>
